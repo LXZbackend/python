@@ -1,0 +1,38 @@
+$def with(todo)
+$:render.header()
+
+        <div class="box post">
+            <h2>修改</h2>
+
+            <p>
+                <input type="text" name="title" class="long_txt" value="$todo['title']" />
+            </p>
+            <p>
+                <input type="submit" onclick="editTD('$todo['_id']')"  value="提交" />
+            </p>
+
+        </div>
+
+<script language=javascript>
+    function editTD(obj){
+        alert(obj);
+        $$.ajax({
+        type: "PATCH",
+        url:"/TodoLists/"+obj,
+        data:{
+            'title':$$(".long_txt").val()
+        },
+		success:function(result){
+			alert("数据: \n" + result + "\n" );
+            window.location.href ='#';
+		},
+        error:function() {
+              alert(arguments[1]);
+              //alert("异常！");
+        }
+        });
+    };
+
+</script>
+
+$:render.foot()

@@ -1,0 +1,1 @@
+# 为网站图片生成缩略图(提示：map 难度：考察灵活应用,安装模块sudo apt-get install python-imaging)
