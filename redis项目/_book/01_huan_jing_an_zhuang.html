@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Redis 环境安装 | redis应用教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        <meta name="author" content="enlong">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-ace/ace.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./01_gui.html" />
+    
+    
+    <link rel="prev" href="./index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="Redis 环境安装"
+        data-filepath="01_huan_jing_an_zhuang.md"
+        data-basepath="."
+        data-revision="Wed Oct 12 2016 17:18:57 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Redis 简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="01_huan_jing_an_zhuang.html">
+            
+                
+                    <a href="./01_huan_jing_an_zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Redis 环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="01_gui.html">
+            
+                
+                    <a href="./01_gui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Redis 可视化客户端工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="02_redis_ji_ben_shu_ju_lei_xing.html">
+            
+                
+                    <a href="./02_redis_ji_ben_shu_ju_lei_xing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Redis 基本数据类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="01day/string.html">
+            
+                
+                    <a href="./01day/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="01day/hash.html">
+            
+                
+                    <a href="./01day/hash.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Hash
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="01day/list.html">
+            
+                
+                    <a href="./01day/list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        List
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="01day/set.html">
+            
+                
+                    <a href="./01day/set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Set
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="01day/sort-set.html">
+            
+                
+                    <a href="./01day/sort-set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Sort-set
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04_pub_sub.html">
+            
+                
+                    <a href="./04_pub_sub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Redis 订阅和发布模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05_transaction.html">
+            
+                
+                    <a href="./05_transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Redis 事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06_redisshi_yong_chang_jing.html">
+            
+                
+                    <a href="./06_redisshi_yong_chang_jing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Redis 使用场景
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+            
+                
+                    <a href="./07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Redis 数据备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="08_redispei_zhi_wen_jian.html">
+            
+                
+                    <a href="./08_redispei_zhi_wen_jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Redis 配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="09_redischi_jiu_hua.html">
+            
+                
+                    <a href="./09_redischi_jiu_hua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Redis 持久化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_redisxing_neng_ce_shi.html">
+            
+                
+                    <a href="./10_redisxing_neng_ce_shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Redis 性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_ke_hu_duan_api.html">
+            
+                
+                    <a href="./11_ke_hu_duan_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Python 客户端
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="02day/section2.1.html">
+            
+                
+                    <a href="./02day/section2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Python 使用 Redis
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="99_zong_jie.html">
+            
+                
+                    <a href="./99_zong_jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="section99.html">
+            
+                
+                    <a href="./section99.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        作业
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="happy/index.html">
+            
+                
+                    <a href="./happy/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        段子集中营
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="happy/section1.html">
+            
+                
+                    <a href="./happy/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        程序员的样子
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="happy/section2.html">
+            
+                
+                    <a href="./happy/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        要嫁就嫁程序猿
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="happy/section3.html">
+            
+                
+                    <a href="./happy/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                        程序员心花怒放的七种礼物
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.4" data-path="happy/section4.html">
+            
+                
+                    <a href="./happy/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.4.</b>
+                        
+                        程序员该如何找合租室友？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.5" data-path="happy/section5.html">
+            
+                
+                    <a href="./happy/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.5.</b>
+                        
+                        程序猿招租广告 手机号竟是一串代码
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >redis应用教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="redis-&#x73AF;&#x5883;&#x5B89;&#x88C5;">Redis &#x73AF;&#x5883;&#x5B89;&#x88C5;</h1>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;&#x8001;&#x7248;&#x672C;3.0.6</p>
+<pre><code class="lang-bash"><span class="hljs-number">1</span>. &#x5378;&#x8F7D;&#x8F6F;&#x4EF6;
+sudo apt-get remove redis-server
+<span class="hljs-number">2</span>. &#x6E05;&#x9664;&#x914D;&#x7F6E;
+sudo apt-get remove --purge redis-server
+<span class="hljs-number">3</span>. &#x5220;&#x9664;&#x6B8B;&#x7559;&#x6587;&#x4EF6;
+sudo find / -name redis
+&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;
+sudo rm -rf var/lib/redis/
+sudo rm -rf /var/<span class="hljs-built_in">log</span>/redis
+sudo rm -rf /etc/redis/
+sudo rm -rf /usr/bin/redis-*
+sudo rm -rf /usr/<span class="hljs-built_in">local</span>/bin/redis-*
+sudo rm -rf /usr/<span class="hljs-built_in">local</span>/redis/
+</code></pre>
+<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://redis.io/download" target="_blank">http://redis.io/download</a>
+&#xFF0C;&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x6587;&#x6863;&#x7248;&#x672C;&#xFF0C;&#x7A33;&#x5B9A;&#x7248;&#x7CFB;&#x5217;.</p>
+<ol>
+<li>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x6587;&#x4EF6;<pre><code class="lang-bash">wget http://download.redis.io/releases/redis-<span class="hljs-number">3.2</span>.<span class="hljs-number">3</span>.tar.gz
+</code></pre>
+</li>
+<li>&#x89E3;&#x538B;<pre><code>tar -zxvf redis-3.2.3.tar.gz
+</code></pre></li>
+<li>copy&#x6587;&#x4EF6;&#x5E76;ls&#x67E5;&#x770B;<pre><code>sudo mkdir -p /usr/local/redis/
+sudo cp -r redis-3.2.3/* /usr/local/redis/
+ls /usr/local/redis/
+</code></pre></li>
+<li>&#x8FDB;&#x5165;&#x5B89;&#x88C5;&#x76EE;&#x5F55;<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/redis/
+</code></pre>
+</li>
+<li><p>&#x7F16;&#x8BD1;</p>
+<p>&#x9996;&#x5148;&#x6253;&#x5F00;<code>README.md</code>&#xFF0C;&#x7FFB;&#x9605;&#x57FA;&#x672C;<code>build</code>&#x548C;<code>install</code>&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-bash">vi README.md
+sudo make
+</code></pre>
+<p>&#x5C1D;&#x8BD5;&#x73AF;&#x5883;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;(Hint: It&apos;s a good idea to run &apos;make test&apos; ;)</p>
+<pre><code class="lang-bash">sudo make <span class="hljs-built_in">test</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FA;&#x73B0;</p>
+<pre><code class="lang-bash">\o/ All tests passed without errors!
+</code></pre>
+<p><img src="photos/06_install01.png" alt=""></p>
+<p>&#x8868;&#x793A;redis&#x73AF;&#x5883;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>&#x5B89;&#x88C5;
+&#x6700;&#x540E;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-cpp">cd src
+sudo make install
+</code></pre>
+</li>
+<li><p>&#x67E5;&#x770B;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x547D;&#x4EE4;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">ls /usr/<span class="hljs-built_in">local</span>/bin/redis-*
+--/usr/<span class="hljs-built_in">local</span>/bin/redis-benchmark     &#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;,&#x4F8B;&#x5982;&#xFF1A;redis-benchmark -n <span class="hljs-number">1000000</span> -c <span class="hljs-number">50</span> , <span class="hljs-number">50</span>&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5E76;&#x53D1;<span class="hljs-number">1000000</span>&#x4E2A;SETs/GETs&#x67E5;&#x8BE2;
+--/usr/<span class="hljs-built_in">local</span>/bin/redis-check-aof     &#x66F4;&#x65B0;&#x65E5;&#x5FD7;&#x68C0;&#x67E5;
+--/usr/<span class="hljs-built_in">local</span>/bin/redis-check-dump    &#x672C;&#x5730;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x68C0;&#x67E5;
+--/usr/<span class="hljs-built_in">local</span>/bin/redis-cli           &#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#x5DE5;&#x5177;
+--/usr/<span class="hljs-built_in">local</span>/bin/redis-server        &#x670D;&#x52A1;&#x5668;&#x7A0B;&#x5E8F;
+</code></pre>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ..
+sudo mkdir /etc/redis
+sudo cp redis.conf /etc/redis/
+ls /etc/redis/redis.conf
+</code></pre>
+<h2 id="&#x542F;&#x52A8;redis">&#x542F;&#x52A8;redis</h2>
+<pre><code class="lang-bash">python@ubuntu:~<span class="hljs-variable">$sudo</span> redis-server /etc/redis/redis.conf
+</code></pre>
+<p>&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x4EE3;&#x8868;&#x542F;&#x52A8;&#x6210;&#x529F;</p>
+<pre><code class="lang-bash">python@ubuntu:~$ redis-sever /etc/redis/redis.conf 
+&#x672A;&#x627E;&#x5230; <span class="hljs-string">&apos;redis-sever&apos;</span> &#x547D;&#x4EE4;&#xFF0C;&#x60A8;&#x8981;&#x8F93;&#x5165;&#x7684;&#x662F;&#x5426;&#x662F;&#xFF1A;
+&#x547D;&#x4EE4; <span class="hljs-string">&apos;redis-server&apos;</span> &#x6765;&#x81EA;&#x4E8E;&#x5305; <span class="hljs-string">&apos;redis-server&apos;</span> (universe)
+redis-sever&#xFF1A;&#x672A;&#x627E;&#x5230;&#x547D;&#x4EE4;
+python@ubuntu:~$ redis-server /etc/redis/redis.conf 
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.535</span> * Increased maximum number of open files to <span class="hljs-number">10032</span> (it was originally <span class="hljs-built_in">set</span> to <span class="hljs-number">1024</span>).
+               _._                                                  
+          _.-``__ <span class="hljs-string">&apos;&apos;</span>-._                                             
+     _.-``    `.  `_.  <span class="hljs-string">&apos;&apos;</span>-._           Redis <span class="hljs-number">3.2</span>.<span class="hljs-number">3</span> (<span class="hljs-number">00000000</span>/<span class="hljs-number">0</span>) <span class="hljs-number">64</span> bit
+ .-`` .-```.  ```\/    _.,_ <span class="hljs-string">&apos;&apos;</span>-._                                   
+(    <span class="hljs-string">&apos;      ,       .-`  | `,    )     Running in standalone mode
+|`-._`-...-` __...-.``-._|&apos;</span>` _.-<span class="hljs-string">&apos;|     Port: 6379
+|    `-._   `._    /     _.-&apos;</span>    |     PID: <span class="hljs-number">23003</span>
+ `-._    `-._  `-./  _.-<span class="hljs-string">&apos;    _.-&apos;</span>                                   
+|`-._`-._    `-.__.-<span class="hljs-string">&apos;    _.-&apos;</span>_.-<span class="hljs-string">&apos;|                                  
+|    `-._`-._        _.-&apos;</span>_.-<span class="hljs-string">&apos;    |           http://redis.io        
+ `-._    `-._`-.__.-&apos;</span>_.-<span class="hljs-string">&apos;    _.-&apos;</span>                                   
+|`-._`-._    `-.__.-<span class="hljs-string">&apos;    _.-&apos;</span>_.-<span class="hljs-string">&apos;|                                  
+|    `-._`-._        _.-&apos;</span>_.-<span class="hljs-string">&apos;    |                                  
+ `-._    `-._`-.__.-&apos;</span>_.-<span class="hljs-string">&apos;    _.-&apos;</span>                                   
+     `-._    `-.__.-<span class="hljs-string">&apos;    _.-&apos;</span>                                       
+         `-._        _.-<span class="hljs-string">&apos;                                           
+             `-.__.-&apos;</span>                                               
+
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.536</span> <span class="hljs-comment"># WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span>
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.537</span> <span class="hljs-comment"># Server started, Redis version 3.2.3</span>
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.537</span> <span class="hljs-comment"># WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &apos;vm.overcommit_memory = 1&apos; to /etc/sysctl.conf and then reboot or run the command &apos;sysctl vm.overcommit_memory=1&apos; for this to take effect.</span>
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.537</span> <span class="hljs-comment"># WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &apos;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&apos; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</span>
+<span class="hljs-number">23003</span>:M <span class="hljs-number">17</span> Sep <span class="hljs-number">10</span>:<span class="hljs-number">52</span>:<span class="hljs-number">57.537</span> * The server is now ready to accept connections on port <span class="hljs-number">6379</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="&#x8FDE;&#x63A5;redis&#x670D;&#x52A1;&#x5668;">&#x8FDE;&#x63A5;redis&#x670D;&#x52A1;&#x5668;</h2>
+<p>&#x65B0;&#x5F00;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x6216;&#x8005;redis-server&#x540E;&#x53F0;&#x542F;&#x52A8;&#x3002;</p>
+<p>&#x901A;&#x8FC7;</p>
+<pre><code class="lang-bash">$ redis-cli
+</code></pre>
+<p>&#x5F97;&#x5230;</p>
+<pre><code class="lang-bash"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt;
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; ping
+PONG
+</code></pre>
+<p>&#x4EE3;&#x8868;redis&#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: Redis 简介"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./01_gui.html" class="navigation navigation-next " aria-label="Next page: Redis 可视化客户端工具"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbookuse"},"toc":{"addClass":true,"className":"toc"},"github":{"url":"https://github.com/piaosanlang"},"search-pro":{"cutWordLib":"nodejieba","defineWord":["gitbook-use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy enlong 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"donate":{"wechat":"/photos/weixin.JPG","alipay":"/photos/alipay.PNG","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"splitter":{},"ace":{},"expandable-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Redis 配置文件 | redis应用教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        <meta name="author" content="enlong">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-ace/ace.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./09_redischi_jiu_hua.html" />
+    
+    
+    <link rel="prev" href="./07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="8"
+        data-chapter-title="Redis 配置文件"
+        data-filepath="08_redispei_zhi_wen_jian.md"
+        data-basepath="."
+        data-revision="Wed Oct 12 2016 17:18:57 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Redis 简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01_huan_jing_an_zhuang.html">
+            
+                
+                    <a href="./01_huan_jing_an_zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Redis 环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="01_gui.html">
+            
+                
+                    <a href="./01_gui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Redis 可视化客户端工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="02_redis_ji_ben_shu_ju_lei_xing.html">
+            
+                
+                    <a href="./02_redis_ji_ben_shu_ju_lei_xing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Redis 基本数据类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="01day/string.html">
+            
+                
+                    <a href="./01day/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="01day/hash.html">
+            
+                
+                    <a href="./01day/hash.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Hash
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="01day/list.html">
+            
+                
+                    <a href="./01day/list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        List
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="01day/set.html">
+            
+                
+                    <a href="./01day/set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Set
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="01day/sort-set.html">
+            
+                
+                    <a href="./01day/sort-set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Sort-set
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04_pub_sub.html">
+            
+                
+                    <a href="./04_pub_sub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Redis 订阅和发布模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05_transaction.html">
+            
+                
+                    <a href="./05_transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Redis 事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06_redisshi_yong_chang_jing.html">
+            
+                
+                    <a href="./06_redisshi_yong_chang_jing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Redis 使用场景
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+            
+                
+                    <a href="./07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Redis 数据备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8" data-path="08_redispei_zhi_wen_jian.html">
+            
+                
+                    <a href="./08_redispei_zhi_wen_jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Redis 配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="09_redischi_jiu_hua.html">
+            
+                
+                    <a href="./09_redischi_jiu_hua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Redis 持久化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_redisxing_neng_ce_shi.html">
+            
+                
+                    <a href="./10_redisxing_neng_ce_shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Redis 性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_ke_hu_duan_api.html">
+            
+                
+                    <a href="./11_ke_hu_duan_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Python 客户端
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="02day/section2.1.html">
+            
+                
+                    <a href="./02day/section2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Python 使用 Redis
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="99_zong_jie.html">
+            
+                
+                    <a href="./99_zong_jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="section99.html">
+            
+                
+                    <a href="./section99.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        作业
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="happy/index.html">
+            
+                
+                    <a href="./happy/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        段子集中营
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="happy/section1.html">
+            
+                
+                    <a href="./happy/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        程序员的样子
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="happy/section2.html">
+            
+                
+                    <a href="./happy/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        要嫁就嫁程序猿
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="happy/section3.html">
+            
+                
+                    <a href="./happy/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                        程序员心花怒放的七种礼物
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.4" data-path="happy/section4.html">
+            
+                
+                    <a href="./happy/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.4.</b>
+                        
+                        程序员该如何找合租室友？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.5" data-path="happy/section5.html">
+            
+                
+                    <a href="./happy/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.5.</b>
+                        
+                        程序猿招租广告 手机号竟是一串代码
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >redis应用教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="redis-&#x914D;&#x7F6E;&#x6587;&#x4EF6;">Redis &#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
+<p>&#x5728;&#x542F;&#x52A8;Redis&#x670D;&#x52A1;&#x5668;&#x65F6;,&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E3A;&#x5176;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;,&#x7F3A;&#x7701;&#x60C5;&#x51B5;&#x4E0B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;Redis&#x7684;&#x6E90;&#x7801;&#x76EE;&#x5F55;&#x4E0B;,&#x6587;&#x4EF6;&#x540D;&#x4E3A;<strong>redis.conf&#x3002;</strong></p>
+<p>redis&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4F7F;&#x7528;<code>#######################</code>&#x88AB;&#x5206;&#x6210;&#x4E86;&#x51E0;&#x5927;&#x5757;&#x533A;&#x57DF;,</p>
+<p>&#x4E3B;&#x8981;&#x6709;:</p>
+<ol>
+<li>&#x901A;&#x7528;(general)</li>
+<li>&#x5FEB;&#x7167;(snapshotting)</li>
+<li>&#x590D;&#x5236;(replication)</li>
+<li>&#x5B89;&#x5168;(security)</li>
+<li>&#x9650;&#x5236;(limits)</li>
+<li>&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;(append only mode)</li>
+<li>LUA&#x811A;&#x672C;(lua scripting)</li>
+<li>REDIS&#x96C6;&#x7FA4;(REDIS CLUSTER)</li>
+<li>&#x6162;&#x65E5;&#x5FD7;(slow log)</li>
+<li>&#x4E8B;&#x4EF6;&#x901A;&#x77E5;(event notification)</li>
+<li>ADVANCED CONFIG</li>
+</ol>
+<p>&#x4E3A;&#x4E86;&#x5BF9;Redis&#x7684;&#x7CFB;&#x7EDF;&#x5B9E;&#x73B0;&#x6709;&#x4E00;&#x4E2A;&#x76F4;&#x63A5;&#x7684;&#x8BA4;&#x8BC6;,&#x6211;&#x4EEC;&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;Redis&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x54EA;&#x4E9B;&#x4E3B;&#x8981;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<hr>
+<ul>
+<li>daemonize no</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;,redis&#x4E0D;&#x662F;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;,&#x628A;&#x8BE5;&#x9879;&#x7684;&#x503C;&#x66F4;&#x6539;&#x4E3A;yes;</p>
+<hr>
+<ul>
+<li>pidfile /var/run/redis_6379.pid</li>
+</ul>
+<p>&#x5F53;Redis&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;,Redis&#x9ED8;&#x8BA4;&#x4F1A;&#x628A;pid&#x6587;&#x4EF6;&#x653E;&#x5728;/var/run/redis.pid, &#x4F60;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5230;&#x5176;&#x4ED6;&#x5730;&#x5740;&#x3002;&#x5F53;&#x8FD0;&#x884C;&#x591A;&#x4E2A;redis&#x670D;&#x52A1;&#x65F6;,&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4E0D;&#x540C;&#x7684;pid&#x6587;&#x4EF6;&#x548C;&#x7AEF;&#x53E3;;</p>
+<hr>
+<ul>
+<li>port 6379</li>
+</ul>
+<p>&#x6307;&#x5B9A;redis&#x8FD0;&#x884C;&#x7684;&#x7AEF;&#x53E3;,&#x9ED8;&#x8BA4;&#x662F;6379;</p>
+<p>&#x4F5C;&#x8005;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x7BC7;&#x535A;&#x6587;&#x4E2D;&#x89E3;&#x91CA;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x7528;6379&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#xFF0C;&#x56E0;&#x4E3A;6379&#x5728;&#x624B;&#x673A;&#x6309;&#x952E;&#x4E0A;MERZ&#x5BF9;&#x5E94;&#x7684;&#x53F7;&#x7801;&#xFF0C;&#x800C;MERZ&#x53D6;&#x81EA;&#x610F;&#x5927;&#x5229;&#x6B4C;&#x5973;Alessia Merz&#x7684;&#x540D;&#x5B57;</p>
+<hr>
+<ul>
+<li>bind 127.0.0.1</li>
+</ul>
+<p>&#x6307;&#x5B9A;redis&#x53EA;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x4E8E;&#x8BE5;IP&#x5730;&#x5740;&#x7684;&#x8BF7;&#x6C42;,&#x5982;&#x679C;&#x4E0D;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;,&#x90A3;&#x4E48;&#x5C06;&#x5904;&#x7406;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x3002;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x6700;&#x597D;&#x8BBE;&#x7F6E;&#x8BE5;&#x9879;;</p>
+<hr>
+<ul>
+<li>loglevel notice</li>
+</ul>
+<p>&#x6307;&#x5B9A;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7EA7;&#x522B;,</p>
+<p>&#x5176;&#x4E2D;Redis&#x603B;&#x5171;&#x652F;&#x6301;&#x56DB;&#x4E2A;&#x7EA7;&#x522B;: debug &#x3001;verbose &#x3001;notice &#x3001;warning, &#x9ED8;&#x8BA4;&#x4E3A; notice &#x3002;</p>
+<ul>
+<li>debug&#x8868;&#x793A;&#x8BB0;&#x5F55;&#x5F88;&#x591A;&#x4FE1;&#x606F;,&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x548C;&#x6D4B;&#x8BD5;&#x3002;</li>
+<li>verbose&#x8868;&#x793A;&#x8BB0;&#x5F55;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;, &#x4F46;&#x4E0D;&#x50CF;debug&#x4F1A;&#x8BB0;&#x5F55;&#x90A3;&#x4E48;&#x591A;&#x3002;</li>
+<li>notice&#x8868;&#x793A;&#x666E;&#x901A;&#x7684;verbose,&#x5E38;&#x7528;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x3002;</li>
+<li>warning &#x8868;&#x793A;&#x53EA;&#x6709;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x6216;&#x8005;&#x4E25;&#x91CD;&#x7684;&#x4FE1;&#x606F;&#x4F1A;&#x8BB0;&#x5F55;&#x5230;&#x65E5;&#x5FD7;;</li>
+</ul>
+<hr>
+<ul>
+<li>logfile &quot;&quot;</li>
+</ul>
+<p>&#x914D;&#x7F6E;log&#x6587;&#x4EF6;&#x5730;&#x5740;,&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;stdout&#x3002;&#x82E5;&#x540E;&#x53F0;&#x6A21;&#x5F0F;&#x4F1A;&#x8F93;&#x51FA;&#x5230;/dev/null(&quot;&#x9ED1;&#x6D1E;&quot;);
+&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#xFF1A;/var/log/redis/redis.log&#xFF09;</p>
+<hr>
+<ul>
+<li>databases 16</li>
+</ul>
+<p>&#x53EF;&#x7528;&#x6570;&#x636E;&#x5E93;&#x6570;,&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;16,&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;&#x4E3A;0,&#x6570;&#x636E;&#x5E93;&#x8303;&#x56F4;&#x5728;0&#xAD; 15&#x4E4B;&#x95F4;&#x5207;&#x6362;,&#x5F7C;&#x6B64;&#x9694;&#x79BB;;</p>
+<hr>
+<ul>
+<li>save</li>
+</ul>
+<p>&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x5230;&#x78C1;&#x76D8;,&#x683C;&#x5F0F;&#x4E3A; <code>save &lt;seconds&gt; &lt;changes&gt;</code>,&#x6307;&#x51FA;&#x5728;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x5185;,&#x6709;&#x591A;&#x5C11;&#x6B21;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;, &#x5C31;&#x5C06;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5230;&#x6570;&#x636E;&#x6587;&#x4EF6;rdb&#x3002;&#x76F8;&#x5F53;&#x4E8E;&#x6761;&#x4EF6;&#x89E6;&#x53D1;&#x6293;&#x53D6;&#x5FEB;&#x7167;,&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x914D;&#x5408;&#x3002;</p>
+<p>&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x5230;&#x78C1;&#x76D8;:</p>
+<ul>
+<li>save 900 1 #900&#x79D2;&#xFF08;15&#x5206;&#x949F;&#xFF09;&#x5185;&#x81F3;&#x5C11;&#x6709;1&#x4E2A;key&#x88AB;&#x6539;&#x53D8;</li>
+<li>save 300 10 #300&#x79D2;&#xFF08;5&#x5206;&#x949F;&#xFF09;&#x5185;&#x81F3;&#x5C11;&#x6709;10&#x4E2A;key&#x88AB;&#x6539;&#x53D8;</li>
+<li>save 60 10000 #60&#x79D2;&#x5185;&#x81F3;&#x5C11;&#x6709;10000&#x4E2A;key&#x88AB;&#x6539;&#x53D8;</li>
+</ul>
+<hr>
+<ul>
+<li>rdbcompression yes</li>
+</ul>
+<p>&#x5B58;&#x50A8;&#x81F3;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x65F6;(&#x6301;&#x4E45;&#x5316;&#x5230;rdb&#x6587;&#x4EF6;)&#x662F;&#x5426;&#x538B;&#x7F29;&#x6570;&#x636E;,&#x9ED8;&#x8BA4;&#x4E3A;yes;</p>
+<p>&#x5982;&#x679C;&#x4E3A;&#x4E86;&#x8282;&#x7701;CPU&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x8BE5;&#x9009;&#x9879;&#xFF0C;&#x4F46;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x53D8;&#x7684;&#x5DE8;&#x5927;</p>
+<hr>
+<ul>
+<li>dbfilename dump.rdb</li>
+</ul>
+<p>&#x672C;&#x5730;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x540D;,&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;dump.rdb;</p>
+<hr>
+<ul>
+<li>dir ./</li>
+</ul>
+<p>&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x6570;&#x636E;&#x5E93;&#x955C;&#x50CF;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#x653E;&#x7F6E;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<hr>
+<ul>
+<li>slaveof</li>
+</ul>
+<p>&#x4E3B;&#x4ECE;&#x590D;&#x5236;,&#x8BBE;&#x7F6E;&#x8BE5;&#x6570;&#x636E;&#x5E93;&#x4E3A;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x3002;&#x8BBE;&#x7F6E;&#x5F53;&#x672C;&#x673A;&#x4E3A;slave&#x670D;&#x52A1;&#x65F6;,&#x8BBE;&#x7F6E;master&#x670D;&#x52A1;&#x7684;IP&#x5730;&#x5740;&#x53CA;&#x7AEF;&#x53E3;&#x3002; &#x5728;Redis&#x542F;&#x52A8;&#x65F6;,&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x4ECE;master&#x8FDB;&#x884C;&#x6570;&#x636E;&#x540C;&#x6B65;;</p>
+<hr>
+<ul>
+<li>masterauth</li>
+</ul>
+<p>&#xFFFC;&#x5F53;master&#x670D;&#x52A1;&#x8BBE;&#x7F6E;&#x4E86;&#x5BC6;&#x7801;&#x4FDD;&#x62A4;&#x65F6;(&#x7528;requirepass&#x5236;&#x5B9A;&#x7684;&#x5BC6;&#x7801;)slave&#x670D;&#x52A1;&#x8FDE;&#x63A5;master&#x7684;&#x5BC6;&#x7801;;</p>
+<hr>
+<ul>
+<li>slave-serve-stale-data yes</li>
+</ul>
+<p>&#x5F53;&#x4E00;&#x4E2A;slave&#x5931;&#x53BB;&#x548C;master&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x6216;&#x8005;&#x540C;&#x6B65;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x4E2D;&#xFF0C;slave&#x7684;&#x884C;&#x4E3A;&#x6709;&#x4E24;&#x79CD;&#x53EF;&#x80FD;&#xFF1A;</p>
+<p>1) &#x5982;&#x679C; slave-serve-stale-data &#x8BBE;&#x7F6E;&#x4E3A; &quot;yes&quot; (&#x9ED8;&#x8BA4;&#x503C;)&#xFF0C;slave&#x4F1A;&#x7EE7;&#x7EED;&#x54CD;&#x5E94;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x6B63;&#x5E38;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x8FD8;&#x6CA1;&#x83B7;&#x5F97;&#x503C;&#x7684;&#x7A7A;&#x6570;&#x636E;&#x3002;</p>
+<p>2) &#x5982;&#x679C; slave-serve-stale-data &#x8BBE;&#x7F6E;&#x4E3A; &quot;no&quot;&#xFF0C;slave&#x4F1A;&#x56DE;&#x590D;&quot;&#x6B63;&#x5728;&#x4ECE;master&#x540C;&#x6B65;&#xFF08;SYNC with master in progress&#xFF09;&quot;&#x6765;&#x5904;&#x7406;&#x5404;&#x79CD;&#x8BF7;&#x6C42;&#xFF0C;&#x9664;&#x4E86; INFO &#x548C; SLAVEOF &#x547D;&#x4EE4;&#x3002;</p>
+<hr>
+<ul>
+<li>repl-ping-slave-period 10</li>
+</ul>
+<p>&#x4ECE;&#x5E93;&#x4F1A;&#x6309;&#x7167;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5411;&#x4E3B;&#x5E93;&#x53D1;&#x9001;PING,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;repl-ping-slave-period&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x95F4;&#x9694;,&#x9ED8;&#x8BA4;&#x662F;10&#x79D2;;</p>
+<hr>
+<ul>
+<li>repl-timeout 60</li>
+</ul>
+<p>&#x8BBE;&#x7F6E;&#x4E3B;&#x5E93;&#x6279;&#x91CF;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x95F4;&#x6216;&#x8005;ping&#x56DE;&#x590D;&#x65F6;&#x95F4;&#x95F4;&#x9694;,&#x9ED8;&#x8BA4;&#x503C;&#x662F;60&#x79D2;,&#x4E00;&#x5B9A;&#x8981;&#x786E;&#x4FDD;repl-timeout&#x5927;&#x4E8E;repl-ping-slave-period ;&#x4E0D;&#x7136;&#x4F1A;&#x7ECF;&#x5E38;&#x68C0;&#x6D4B;&#x5230;&#x8D85;&#x65F6;&#x3002;</p>
+<p>master&#x68C0;&#x6D4B;&#x5230;slave&#x4E0A;&#x6B21;&#x53D1;&#x9001;&#x7684;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;repl-timeout&#xFF0C;&#x5373;&#x8BA4;&#x4E3A;slave&#x79BB;&#x7EBF;&#xFF0C;&#x6E05;&#x9664;&#x8BE5;slave&#x4FE1;&#x606F;&#x3002;</p>
+<p>slave&#x68C0;&#x6D4B;&#x5230;&#x4E0A;&#x6B21;&#x548C;master&#x4EA4;&#x4E92;&#x7684;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;repl-timeout&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;master&#x79BB;&#x7EBF;</p>
+<hr>
+<ul>
+<li>requirepass foobared</li>
+</ul>
+<p>&#x8BBE;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x540E;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x6307;&#x5B9A;&#x524D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5BC6;&#x7801;&#x3002;&#x56E0;&#x4E3A;redis&#x901F;&#x5EA6;&#x76F8;&#x5F53;&#x5FEB;,&#x6240;&#x4EE5;&#x5728;&#x4E00;&#x53F0;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0B;, &#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7684;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x79D2;&#x949F;&#x8FDB;&#x884C;150K&#x6B21;&#x7684;&#x5BC6;&#x7801;&#x5C1D;&#x8BD5;,&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x5BC6;&#x7801;&#x6765;&#x9632;&#x6B62;&#x66B4;&#x529B;&#x7834;&#x89E3;;</p>
+<hr>
+<ul>
+<li>rename&#xAD;command CONFIG &quot;&quot;</li>
+</ul>
+<p>&#x547D;&#x4EE4;&#x91CD;&#x547D;&#x540D;,&#x5728;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x73AF;&#x5883;&#x4E0B;&#x53EF;&#x4EE5;&#x91CD;&#x547D;&#x540D;&#x76F8;&#x5BF9;&#x5371;&#x9669;&#x7684;&#x547D;&#x4EE4;,&#x6BD4;&#x5982;&#x628A;CONFIG&#x91CD;&#x540D;&#x4E3A;&#x4E00;&#x4E2A;&#x4E0D;&#x5BB9;&#x6613;&#x731C;&#x6D4B;&#x7684;&#x5B57;&#x7B26;: rename-command CONFIG b840fc02d524045429941cc15f59e41cb7be6c52&#x3002; &#x5982;&#x679C;&#x60F3;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;,&#x76F4;&#x63A5;&#x628A;&#x5B83;&#x91CD;&#x547D;&#x540D;&#x4E3A;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&quot;&quot;&#x5373;&#x53EF;:rename-command CONFIG &quot;&quot;;</p>
+<hr>
+<ul>
+<li>maxclients 128</li>
+</ul>
+<p>&#x8BBE;&#x7F6E;&#x6700;&#x591A;&#x540C;&#x65F6;&#x8FDE;&#x63A5;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x8FD9;&#x4E2A;&#x5173;&#x7CFB;&#x5230;Redis&#x8FDB;&#x7A0B;&#x80FD;&#x591F;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x7279;&#x6B8A;&#x503C;&quot;0&quot;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x3002; </p>
+<p>&#x4E00;&#x65E6;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#xFF0C;Redis&#x4F1A;&#x5173;&#x95ED;&#x6240;&#x6709;&#x65B0;&#x8FDE;&#x63A5;&#x5E76;&#x53D1;&#x9001;&#x9519;&#x8BEF;&quot;&#x8FBE;&#x5230;&#x6700;&#x5927;&#x7528;&#x6237;&#x6570;&#x4E0A;&#x9650;&#xFF08;max number of clients reached&#xFF09;&quot;</p>
+<hr>
+<ul>
+<li>maxmemory</li>
+</ul>
+<p>&#x6307;&#x5B9A;Redis&#x6700;&#x5927;&#x5185;&#x5B58;&#x9650;&#x5236;&#x3002;Redis&#x5728;&#x542F;&#x52A8;&#x65F6;&#x4F1A;&#x628A;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;,&#x8FBE;&#x5230;&#x6700;&#x5927;&#x5185;&#x5B58;&#x540E;,Redis&#x4F1A;&#x5148;&#x5C1D;&#x8BD5;&#x6E05;&#x9664;&#x5DF2;&#x5230;&#x671F;&#x6216;&#x5373;&#x5C06;&#x5230;&#x671F;&#x7684;Key, Redis&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x79FB;&#x9664;&#x7A7A;&#x7684;list&#x5BF9;&#x8C61;&#x3002;&#x5F53;&#x6B64;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x540E;,&#x4ECD;&#x7136;&#x5230;&#x8FBE;&#x6700;&#x5927;&#x5185;&#x5B58;&#x8BBE;&#x7F6E;,&#x5C06;&#x65E0;&#x6CD5;&#x518D;&#x8FDB;&#x884C;&#x5199;&#x5165;&#x64CD;&#x4F5C;,&#x4F46;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x3002; </p>
+<p>&#x6CE8;&#x610F;:Redis&#x65B0;&#x7684;vm&#x673A;&#x5236;,&#x4F1A;&#x628A;Key&#x5B58;&#x653E;&#x5185;&#x5B58;,Value&#x4F1A;&#x5B58;&#x653E;&#x5728;swap&#x533A;;</p>
+<hr>
+<ul>
+<li>maxmemory-policy volatile-lru</li>
+</ul>
+<p>&#x5F53;&#x5185;&#x5B58;&#x8FBE;&#x5230;&#x6700;&#x5927;&#x503C;&#x7684;&#x65F6;&#x5019;Redis&#x4F1A;&#x9009;&#x62E9;&#x5220;&#x9664;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x5462;?&#x6709;&#x4E94;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4F9B;&#x9009;&#x62E9;: </p>
+<ul>
+<li>volatile-lru &#x4EE3;&#x8868;&#x5229;&#x7528;LRU&#x7B97;&#x6CD5;&#x79FB;&#x9664;&#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;key(LRU:&#x6700;&#x8FD1;&#x4F7F;&#x7528; LeastRecentlyUsed) </li>
+<li>allkeys-lru &#x4EE3;&#x8868;&#x5229;&#x7528;LRU&#x7B97;&#x6CD5;&#x79FB;&#x9664;&#x4EFB;&#x4F55;key</li>
+<li>volatile-random &#x4EE3;&#x8868;&#x79FB;&#x9664;&#x8BBE;&#x7F6E;&#x8FC7;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x968F;&#x673A;key</li>
+<li>allkeys_random &#x4EE3;&#x8868;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;key, </li>
+<li>volatile-ttl &#x4EE3;&#x8868;&#x79FB;&#x9664;&#x5373;&#x5C06;&#x8FC7;&#x671F;&#x7684;key(minor TTL)</li>
+<li>noeviction &#x4EE3;&#x8868;&#x4E0D;&#x79FB;&#x9664;&#x4EFB;&#x4F55;key,&#x53EA;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5199;&#x9519;&#x8BEF;&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x610F;:&#x5BF9;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x7B56;&#x7565;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5408;&#x9002;&#x7684;key&#x53EF;&#x4EE5;&#x79FB;&#x9664;,&#x5199;&#x7684;&#x65F6;&#x5019;Redis&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;; </p>
+<hr>
+<ul>
+<li>appendonly no</li>
+</ul>
+<p>&#x662F;&#x5426;&#x5F00;&#x542F;aof&#x529F;&#x80FD;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;,redis&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x5F02;&#x6B65;&#x7684;&#x628A;&#x6570;&#x636E;&#x5E93;&#x955C;&#x50CF;&#x5907;&#x4EFD;&#x5230;&#x78C1;&#x76D8;,&#x4F46;&#x662F;&#x8BE5;&#x5907;&#x4EFD;&#x662F;&#x975E;&#x5E38;&#x8017;&#x65F6;&#x7684;,&#x800C;&#x4E14;&#x5907;&#x4EFD;&#x4E5F;&#x4E0D;&#x80FD;&#x5F88;&#x9891;&#x7E41;&#x3002; &#x5982;&#x679C;&#x53D1;&#x751F;&#x8BF8;&#x5982;&#x62C9;&#x95F8;&#x9650;&#x7535;&#x3001;&#x62D4;&#x63D2;&#x5934;&#x7B49;&#x72B6;&#x51B5;,&#x90A3;&#x4E48;&#x5C06;&#x9020;&#x6210;&#x6BD4;&#x8F83;&#x5927;&#x8303;&#x56F4;&#x7684;&#x6570;&#x636E;&#x4E22;&#x5931;,&#x6240;&#x4EE5;redis&#x63D0;&#x4F9B;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;&#x53CA;&#x707E;&#x96BE;&#x6062;&#x590D;&#x65B9;&#x5F0F;&#x3002; </p>
+<p>&#x5F00;&#x542F;appendonly&#x6A21;&#x5F0F;&#x4E4B;&#x540E;,redis&#x4F1A;&#x628A;&#x6240;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6BCF;&#x4E00;&#x6B21;&#x5199;&#x64CD;&#x4F5C;&#x8BF7;&#x6C42;&#x90FD;&#x8FFD;&#x52A0;&#x5230;appendonly.aof&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x5F53;redis&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x65F6;,&#x4F1A;&#x4ECE;&#x8BE5;&#x6587;&#x4EF6;&#x6062;&#x590D;&#x51FA;&#x4E4B;&#x524D;&#x7684;&#x72B6;&#x6001;</p>
+<hr>
+<ul>
+<li>appendfilename appendonly.aof</li>
+</ul>
+<p>AOF&#x6587;&#x4EF6;&#x540D;&#x79F0;,&#x9ED8;&#x8BA4;&#x4E3A;&quot;appendonly.aof&quot;; </p>
+<hr>
+<ul>
+<li>appendfsync everysec</li>
+</ul>
+<p>Redis&#x652F;&#x6301;&#x4E09;&#x79CD;&#x540C;&#x6B65;AOF&#x6587;&#x4EF6;&#x7684;&#x7B56;&#x7565;:</p>
+<ul>
+<li>no &#x4EE3;&#x8868;&#x4E0D;&#x8FDB;&#x884C;&#x540C;&#x6B65;,&#x7CFB;&#x7EDF;&#x53BB;&#x64CD;&#x4F5C;,</li>
+<li>always &#x4EE3;&#x8868;&#x6BCF;&#x6B21;&#x6709;&#x5199;&#x64CD;&#x4F5C;&#x90FD;&#x8FDB;&#x884C;&#x540C;&#x6B65;, </li>
+<li>everysec &#x4EE3;&#x8868;&#x5BF9;&#x5199;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x7D2F;&#x79EF;,&#x6BCF;&#x79D2;&#x540C;&#x6B65;&#x4E00;&#x6B21;</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x662F;&quot;everysec&quot;,&#x6309;&#x7167;&#x901F;&#x5EA6;&#x548C;&#x5B89;&#x5168;&#x6298;&#x4E2D;&#x8FD9;&#x662F;&#x6700;&#x597D;&#x7684;&#x3002;</p>
+<hr>
+<!--
+# 自动重写AOF文件
+#
+# 如果AOF日志文件大到指定百分比，Redis能够通过 BGREWRITEAOF 自动重写AOF日志文件。
+# 
+# 工作原理：Redis记住上次重写时AOF日志的大小（或者重启后没有写操作的话，那就直接用此时的AOF文件），
+#           基准尺寸和当前尺寸做比较。如果当前尺寸超过指定比例，就会触发重写操作。
+#
+# 你还需要指定被重写日志的最小尺寸，这样避免了达到约定百分比但尺寸仍然很小的情况还要重写。
+#
+# 指定百分比为0会禁用AOF自动重写特性。
+
+
+#aof每次rewrite之后,都会记住当前aof文件的大小,当文件增长到一定比例后,继续进行aof rewrite
+auto-aof-rewrite-percentage 100
+
+
+#aof rewrite触发时机,最小文件尺寸
+auto-aof-rewrite-min-size 64mb
+
+#aof rewrite过程中,是否采取增量"文件同步"策略,默认为"yes",而且必须为yes。rewrite过程中,每32M数据进行一次文件同步,这样可以减少"aof大文件"写入对磁盘的操作次数.
+
+aof-rewrite-incremental-fsync yes
+-->
+<ul>
+<li>slowlog-log-slower-than 10000</li>
+</ul>
+<p>&#x8BB0;&#x5F55;&#x8D85;&#x8FC7;&#x7279;&#x5B9A;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0D;&#x5305;&#x62EC;I/O&#x8BA1;&#x7B97;,&#x6BD4;&#x5982;&#x8FDE;&#x63A5;&#x5BA2;&#x6237;&#x7AEF;,&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7B49;,&#x53EA;&#x662F;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x3002; </p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;slow log:&#x4E00;&#x4E2A;&#x662F;&#x544A;&#x8BC9;Redis&#x6267;&#x884C;&#x8D85;&#x8FC7;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#x88AB;&#x8BB0;&#x5F55;&#x7684;&#x53C2;&#x6570;slowlog-log-slower-than(&#x5FAE;&#x5999;), &#x53E6;&#x4E00;&#x4E2A;&#x662F;slow log &#x7684;&#x957F;&#x5EA6;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x65B0;&#x547D;&#x4EE4;&#x88AB;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x5019;&#x6700;&#x65E9;&#x7684;&#x547D;&#x4EE4;&#x5C06;&#x88AB;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x79FB;&#x9664;,</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x65F6;&#x95F4;&#x4EE5;&#x5FAE;&#x79D2;(&#x767E;&#x4E07;&#x5206;&#x4E4B;&#x4E00;&#x79D2;,1000 * 1000)&#x5355;&#x4F4D;, &#x56E0;&#x6B64;1000000&#x4EE3;&#x8868;&#x4E00;&#x5206;&#x949F;&#x3002;</p>
+<pre><code>1&#x79D2;=1000&#x6BEB;&#x79D2;
+1&#x79D2;=1000000&#x5FAE;&#x79D2;
+</code></pre><p>&#x6CE8;&#x610F;&#x5236;&#x5B9A;&#x4E00;&#x4E2A;&#x8D1F;&#x6570;&#x5C06;&#x5173;&#x95ED;&#x6162;&#x65E5;&#x5FD7;,&#x800C;&#x8BBE;&#x7F6E;&#x4E3A;0&#x5C06;&#x5F3A;&#x5236;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x8BB0;&#x5F55;;</p>
+<hr>
+<ul>
+<li>slowlog-max-len 128</li>
+</ul>
+<p>&#x6162;&#x64CD;&#x4F5C;&#x65E5;&#x5FD7;&quot;&#x4FDD;&#x7559;&#x7684;&#x6700;&#x5927;&#x6761;&#x6570;</p>
+<p>&quot;&#x8BB0;&#x5F55;&quot;&#x5C06;&#x4F1A;&#x88AB;&#x961F;&#x5217;&#x5316;,&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E86;&#x6B64;&#x957F;&#x5EA6;,&#x65E7;&#x8BB0;&#x5F55;&#x5C06;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>SLOWLOG &lt;subcommand&gt; args</code>&#x67E5;&#x770B;&#x6162;&#x8BB0;&#x5F55;&#x7684;&#x4FE1;&#x606F;(SLOWLOG get 10,SLOWLOG reset)&#xFF0C;&#x901A;&#x8FC7;&quot;SLOWLOG get num&quot;&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6700;&#x8FD1;num&#x6761;&#x6162;&#x901F;&#x8BB0;&#x5F55;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&quot;&#x8BB0;&#x5F55;&quot;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;/&#x6307;&#x4EE4;/K-V&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<hr>
+<!--
+* hash-max-zipmap-entries 512 && hash-maxz-ipmap-value 64
+
+
+当hash中包含超过指定元素个数并且最大的元素没有超过临界时,hash将以一种特殊的编码方式(大大减少内存使用)来存储, 这里可以设置这两个临界值。Redis Hash对应Value内部实际就是一个HashMap,实际这里会有2种不同实现。 这个Hash的成员比较少时Redis为了节省内存会采用类似一维数组的方式来紧凑存储,而不会采用真正的HashMap结构, 对应的value redisObject的encoding为zipmap。当成员数量增大时会自动转成真正的HashMap,
+此时encoding为ht; 
+
+
+---
+
+
+* hash-max-zipmap-entries 512 512
+
+list数据类型多少节点以下会采用去指针的紧凑存储格式;
+
+
+---
+
+
+* list-max-ziplist-value 64
+
+
+ 数据类型节点值大小小于多少字节会采用紧凑存储格式;
+
+
+---
+
+
+* set­max­intset­entries 512
+
+
+set数据类型内部数据如果全部是数值型,且包含多少节点以下会采用紧凑格式存储; 
+
+
+---
+
+
+* zset­max­ziplist­entries 128
+
+
+zsort数据类型多少节点以下会采用去指针的紧凑存储格式;
+
+
+---
+
+
+* zset­max­ziplist­value 64
+
+
+zsort数据类型节点值大小小于多少字节会采用紧凑存储格式。
+
+
+---
+
+
+* activerehashing yes
+
+
+Redis将在每100毫秒时使用1毫秒的CPU时间来对redis的hash表进行重新hash,可以降低内存的使用。 当你的使用场景中,有非常严格的实时性需要,不能够接受Redis时不时的对请求有2毫秒的延迟的话, 把这项配置为no。如果没有这么严格的实时性要求,可以设置为yes,以便能够尽可能快的释放内存;
+-->
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://github.com/linli8/cnblogs/blob/master/redis%E5%89%AF%E6%9C%AC.conf" target="_blank">https://github.com/linli8/cnblogs/blob/master/redis%E5%89%AF%E6%9C%AC.conf</a></p>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<h4 id="select-&#x547D;&#x4EE4;">Select &#x547D;&#x4EE4;</h4>
+<p>Redis Select &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5207;&#x6362;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7D22;&#x5F15;&#x53F7; index &#x7528;&#x6570;&#x5B57;&#x503C;&#x6307;&#x5B9A;&#xFF0C;&#x4EE5; 0 &#x4F5C;&#x4E3A;&#x8D77;&#x59CB;&#x7D22;&#x5F15;&#x503C;&#x3002;</p>
+<pre><code class="lang-bash">python@ubuntu:/dev$ redis-cli
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; select <span class="hljs-number">1</span>
+OK
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">1</span>]&gt; <span class="hljs-built_in">set</span> name <span class="hljs-string">&apos;itcast.cn&apos;</span>
+OK
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">1</span>]&gt; select <span class="hljs-number">2</span>
+OK
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">2</span>]&gt; <span class="hljs-built_in">set</span> web <span class="hljs-string">&apos;itcast.com&apos;</span>
+OK
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">2</span>]&gt; get web
+<span class="hljs-string">&quot;itcast.com&quot;</span>
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">2</span>]&gt; select <span class="hljs-number">1</span>
+OK
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">1</span>]&gt; get name
+<span class="hljs-string">&quot;itcast.cn&quot;</span>
+<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>[<span class="hljs-number">1</span>]&gt;
+</code></pre>
+<h4 id="shutdown-&#x547D;&#x4EE4;">Shutdown &#x547D;&#x4EE4;</h4>
+<p>Redis Shutdown &#x547D;&#x4EE4;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x505C;&#x6B62;&#x6240;&#x6709;&#x5BA2;&#x6237;&#x7AEF;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x70B9;&#x5728;&#x7B49;&#x5F85;&#xFF0C;&#x6267;&#x884C; SAVE &#x547D;&#x4EE4;</li>
+<li>&#x5982;&#x679C; AOF &#x9009;&#x9879;&#x88AB;&#x6253;&#x5F00;&#xFF0C;&#x66F4;&#x65B0; AOF &#x6587;&#x4EF6;</li>
+<li>&#x5173;&#x95ED; redis &#x670D;&#x52A1;&#x5668;(server)</li>
+</ul>
+<pre><code>redis 127.0.0.1:6379&gt; PING
+PONG
+redis 127.0.0.1:6379&gt; SHUTDOWN
+$ redis
+</code></pre><h4 id="redis-&#x8BA4;&#x8BC1;">Redis &#x8BA4;&#x8BC1;</h4>
+<pre><code>redis-cli
+AUTH &quot;password&quot;
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>redis-cli -h 127.0.0.1 -p 6379 -a myPassword
+</code></pre><h3 id="redis-showlog">Redis Showlog</h3>
+<p>Redis Showlog &#x662F; Redis &#x7528;&#x6765;&#x8BB0;&#x5F55;&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x7684;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x6307;&#x7684;&#x662F;&#x4E0D;&#x5305;&#x62EC;&#x50CF;&#x5BA2;&#x6237;&#x7AEF;&#x54CD;&#x5E94;(talking)&#x3001;&#x53D1;&#x9001;&#x56DE;&#x590D;&#x7B49; IO &#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x5355;&#x5355;&#x662F;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x547D;&#x4EE4;&#x6240;&#x8017;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;slow log &#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x91CC;&#x9762;&#xFF0C;&#x8BFB;&#x5199;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x653E;&#x5FC3;&#x5730;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x4E0D;&#x5FC5;&#x62C5;&#x5FC3;&#x56E0;&#x4E3A;&#x5F00;&#x542F; slow log &#x800C;&#x635F;&#x5BB3; Redis &#x7684;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;
+redis Showlog &#x547D;&#x4EE4;&#x57FA;&#x672C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-bash">redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; SLOWLOG subcommand [argument]
+</code></pre>
+<p>&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-bash">redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; slowlog get <span class="hljs-number">2</span>
+<span class="hljs-number">1</span>) <span class="hljs-number">1</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">14</span>
+   <span class="hljs-number">2</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">1309448221</span>
+   <span class="hljs-number">3</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">15</span>
+   <span class="hljs-number">4</span>) <span class="hljs-number">1</span>) <span class="hljs-string">&quot;ping&quot;</span>
+<span class="hljs-number">2</span>) <span class="hljs-number">1</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">13</span>
+   <span class="hljs-number">2</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">1309448128</span>
+   <span class="hljs-number">3</span>) (<span class="hljs-built_in">integer</span>) <span class="hljs-number">30</span>
+   <span class="hljs-number">4</span>) <span class="hljs-number">1</span>) <span class="hljs-string">&quot;slowlog&quot;</span>
+      <span class="hljs-number">2</span>) <span class="hljs-string">&quot;get&quot;</span>
+      <span class="hljs-number">3</span>) <span class="hljs-string">&quot;100&quot;</span>
+</code></pre>
+<blockquote>
+<p>&#x6BCF;&#x4E00;&#x4E2A;Showlog&#x90FD;&#x662F;&#x7531;&#x56DB;&#x4E2A;&#x5B57;&#x6BB5;&#x7EC4;&#x6210;&#x7684;</p>
+<p>&#x6162;&#x65E5;&#x5FD7;&#x6807;&#x8BC6;&#x7B26;</p>
+<p>&#x8BB0;&#x5F55;&#x7684;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;Unix&#x65F6;&#x95F4;&#x6233;</p>
+<p>&#x6267;&#x884C;&#x6240;&#x9700;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x5FAE;&#x79D2;</p>
+<p>&#x547D;&#x4EE4;&#x3001;&#x53C2;&#x6570;&#x3002;</p>
+</blockquote>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x65E5;&#x5FD7;&#x7684;&#x6570;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-bash">redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; SLOWLOG LEN
+(<span class="hljs-built_in">integer</span>) <span class="hljs-number">14</span>
+&#x4F7F;&#x7528;&#x547D;&#x4EE4; SLOWLOG RESET &#x53EF;&#x4EE5;&#x6E05;&#x7A7A; slow <span class="hljs-built_in">log</span> &#x3002;
+
+redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; SLOWLOG LEN
+(<span class="hljs-built_in">integer</span>) <span class="hljs-number">14</span>
+
+redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; SLOWLOG RESET
+OK
+
+redis <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">6379</span>&gt; SLOWLOG LEN
+(<span class="hljs-built_in">integer</span>) <span class="hljs-number">0</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html" class="navigation navigation-prev " aria-label="Previous page: Redis 数据备份与恢复"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./09_redischi_jiu_hua.html" class="navigation navigation-next " aria-label="Next page: Redis 持久化"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbookuse"},"toc":{"addClass":true,"className":"toc"},"github":{"url":"https://github.com/piaosanlang"},"search-pro":{"cutWordLib":"nodejieba","defineWord":["gitbook-use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy enlong 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"donate":{"wechat":"/photos/weixin.JPG","alipay":"/photos/alipay.PNG","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"splitter":{},"ace":{},"expandable-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

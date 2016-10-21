@@ -1,0 +1,614 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>程序员的样子 | redis应用教程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        <meta name="author" content="enlong">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-ace/ace.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../happy/section2.html" />
+    
+    
+    <link rel="prev" href="../happy/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="14.1"
+        data-chapter-title="程序员的样子"
+        data-filepath="happy/section1.md"
+        data-basepath=".."
+        data-revision="Wed Oct 12 2016 17:18:57 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Redis 简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01_huan_jing_an_zhuang.html">
+            
+                
+                    <a href="../01_huan_jing_an_zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Redis 环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="01_gui.html">
+            
+                
+                    <a href="../01_gui.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Redis 可视化客户端工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="02_redis_ji_ben_shu_ju_lei_xing.html">
+            
+                
+                    <a href="../02_redis_ji_ben_shu_ju_lei_xing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Redis 基本数据类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="01day/string.html">
+            
+                
+                    <a href="../01day/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="01day/hash.html">
+            
+                
+                    <a href="../01day/hash.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Hash
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="01day/list.html">
+            
+                
+                    <a href="../01day/list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        List
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="01day/set.html">
+            
+                
+                    <a href="../01day/set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Set
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="01day/sort-set.html">
+            
+                
+                    <a href="../01day/sort-set.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Sort-set
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04_pub_sub.html">
+            
+                
+                    <a href="../04_pub_sub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Redis 订阅和发布模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05_transaction.html">
+            
+                
+                    <a href="../05_transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Redis 事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06_redisshi_yong_chang_jing.html">
+            
+                
+                    <a href="../06_redisshi_yong_chang_jing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Redis 使用场景
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+            
+                
+                    <a href="../07_redispei_he_chi_jiu_hua_gong_zuo_liu_cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Redis 数据备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="08_redispei_zhi_wen_jian.html">
+            
+                
+                    <a href="../08_redispei_zhi_wen_jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Redis 配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="09_redischi_jiu_hua.html">
+            
+                
+                    <a href="../09_redischi_jiu_hua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Redis 持久化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="10_redisxing_neng_ce_shi.html">
+            
+                
+                    <a href="../10_redisxing_neng_ce_shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Redis 性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="11_ke_hu_duan_api.html">
+            
+                
+                    <a href="../11_ke_hu_duan_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Python 客户端
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="02day/section2.1.html">
+            
+                
+                    <a href="../02day/section2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Python 使用 Redis
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="99_zong_jie.html">
+            
+                
+                    <a href="../99_zong_jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="section99.html">
+            
+                
+                    <a href="../section99.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        作业
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="happy/index.html">
+            
+                
+                    <a href="../happy/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        段子集中营
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="14.1" data-path="happy/section1.html">
+            
+                
+                    <a href="../happy/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        程序员的样子
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="happy/section2.html">
+            
+                
+                    <a href="../happy/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        要嫁就嫁程序猿
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="happy/section3.html">
+            
+                
+                    <a href="../happy/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                        程序员心花怒放的七种礼物
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.4" data-path="happy/section4.html">
+            
+                
+                    <a href="../happy/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.4.</b>
+                        
+                        程序员该如何找合租室友？
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.5" data-path="happy/section5.html">
+            
+                
+                    <a href="../happy/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.5.</b>
+                        
+                        程序猿招租广告 手机号竟是一串代码
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >redis应用教程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <div class="le"><div class="c_t"><h1 id="&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;"> &#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h1></div><div class="c_a_1"><script language="javascript">c_a_1();</script></div><div class="c_t_b"><div class="c_a_0"><script language="javascript">c_a_0();</script><div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1474007762022"><a href="#" class="bds_more" data-cmd="more"></a><a title="&#x5206;&#x4EAB;&#x5230;QQ&#x7A7A;&#x95F4;" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="&#x5206;&#x4EAB;&#x5230;&#x65B0;&#x6D6A;&#x5FAE;&#x535A;" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="&#x5206;&#x4EAB;&#x5230;&#x817E;&#x8BAF;&#x5FAE;&#x535A;" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="&#x5206;&#x4EAB;&#x5230;&#x4EBA;&#x4EBA;&#x7F51;" href="#" class="bds_renren" data-cmd="renren"></a><a title="&#x5206;&#x4EAB;&#x5230;&#x5FAE;&#x4FE1;" href="#" class="bds_weixin" data-cmd="weixin"></a></div></div></div><div class="c_a_2"><script language="javascript">c_a_2();</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1729556811514431" data-ad-slot="4293937028"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="c_a_2_a"><script language="javascript">c_a_2_a();</script><script type="text/javascript"> var cpro_id = 'u1107459';</script><script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div><div class="c_txt"><div class="c_a_3"><script language="javascript">c_a_3();</script></div><p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/907a9793-0714-4fbd-906a-0969802f9600.gif" class="lazy" alt="" data-original="http://ww1.sinaimg.cn/large/c2b1756bjw1e29j5bkeywg.gif" width="550"></p>
+<p>&#xA0;</p>
+<h3 id="&#x5F80;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F80;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x65F6;<strong>&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</strong></h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/d0e5efe3-e928-417c-b9d8-315340c461fd.gif" class="lazy" alt="" data-original="http://ww3.sinaimg.cn/large/c2b1756bjw1e2hj1pprt0g.gif" width="550"></p>
+<h3 id="&#x5F53;&#x8001;&#x677F;&#x8BF4;&#x9879;&#x76EE;&#x5982;&#x679C;&#x80FD;&#x8D76;&#x5728;&#x6700;&#x540E;&#x671F;&#x9650;&#x524D;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x5C06;&#x4F1A;&#x6709;&#x4E00;&#x7B14;&#x5956;&#x91D1;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x8001;&#x677F;&#x8BF4;&#x9879;&#x76EE;&#x5982;&#x679C;&#x80FD;&#x8D76;&#x5728;&#x6700;&#x540E;&#x671F;&#x9650;&#x524D;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x5C06;&#x4F1A;&#x6709;&#x4E00;&#x7B14;&#x5956;&#x91D1;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/2d086be5-aaf5-489e-ba32-60e0f3588a92.gif" class="lazy" alt="" data-original="http://ww4.sinaimg.cn/large/c2b1756bjw1e2hherugixg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x51CC;&#x6668;3&#x70B9;&#x8FD8;&#x5728;&#x4FEE;&#x6539;bug&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x51CC;&#x6668;3&#x70B9;&#x8FD8;&#x5728;&#x4FEE;&#x6539;bug&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/4d32e300-3f32-4d53-84c3-1e670125bff2.gif" class="lazy" alt="" data-original="http://ww4.sinaimg.cn/large/c2b1756bjw1e29joifo96g.gif" width="550"></p>
+<h3 id="&#x5F53;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x6309;ctrls&#x5C31;&#x5173;&#x95ED;&#x4E86;&#x6587;&#x4EF6;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x6309;CTRL-S&#x5C31;&#x5173;&#x95ED;&#x4E86;&#x6587;&#x4EF6;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/76a155c0-a83a-4ba2-8f2a-31a210f782cc.gif" class="lazy" alt="" data-original="http://ww1.sinaimg.cn/large/c2b1756bjw1e2hhjzrzihg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FD4;&#x56DE;&#x4E86;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FD4;&#x56DE;&#x4E86;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/e8cc269a-60d5-408f-93ec-6af8d314dc1b.gif" class="lazy" alt="" data-original="http://ww4.sinaimg.cn/large/c2b1756bjw1e2hi3drb9wg.gif" width="550"></p>
+<h3 id="&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;css&#x7F8E;&#x5316;&#x9875;&#x9762;&#x65F6;&#x7684;&#x6548;&#x679C;">&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;CSS&#x7F8E;&#x5316;&#x9875;&#x9762;&#x65F6;&#x7684;&#x6548;&#x679C;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/66e7852c-3d9e-4f46-82f3-d237bfe3b11f.gif" class="lazy" alt="" data-original="http://ww1.sinaimg.cn/large/c2b1756bjw1e2hih30x5ig.gif" width="550"></p>
+<h3 id="&#x5F53;&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x5728;&#x529E;&#x516C;&#x5BA4;&#x6325;&#x6C57;&#x5982;&#x96E8;&#x7684;&#x52A0;&#x73ED;&#x800C;&#x4F60;&#x5374;&#x80FD;&#x5B89;&#x7136;&#x7684;&#x56DE;&#x5BB6;&#x5EA6;&#x5468;&#x672B;&#x65F6;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x5728;&#x529E;&#x516C;&#x5BA4;&#x6325;&#x6C57;&#x5982;&#x96E8;&#x7684;&#x52A0;&#x73ED;&#x800C;&#x4F60;&#x5374;&#x80FD;&#x5B89;&#x7136;&#x7684;&#x56DE;&#x5BB6;&#x5EA6;&#x5468;&#x672B;&#x65F6;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/77a3696a-6a2e-491d-a368-75b875596c13.gif" class="lazy" alt="" data-original="http://ww4.sinaimg.cn/large/c2b1756bjw1e2hirb2zbsg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x8001;&#x677F;&#x60F3;&#x627E;&#x4E00;&#x4E2A;&#x4EBA;&#x6765;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x4E25;&#x91CD;bug&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x8001;&#x677F;&#x60F3;&#x627E;&#x4E00;&#x4E2A;&#x4EBA;&#x6765;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x4E25;&#x91CD;bug&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/f3b55c08-26ad-4703-a97a-12b943a0e051.gif" class="lazy" alt="" data-original="http://ww2.sinaimg.cn/large/c2b1756bjw1e2hjbjeraeg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x53D1;&#x73B0;&#x6709;&#x4E1C;&#x897F;&#x4E0A;&#x5468;&#x4E94;&#x8FD8;&#x597D;&#x7528;&#x800C;&#x5230;&#x4E86;&#x5468;&#x4E00;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x53D1;&#x73B0;&#x6709;&#x4E1C;&#x897F;&#x4E0A;&#x5468;&#x4E94;&#x8FD8;&#x597D;&#x7528;&#x800C;&#x5230;&#x4E86;&#x5468;&#x4E00;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/061890b8-b468-4ec1-b58d-f3f345e67e1d.gif" class="lazy" alt="" data-original="http://ww3.sinaimg.cn/large/c2b1756bjw1e2hib9ldrkg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x7ECF;&#x8FC7;&#x4E86;&#x6570;&#x5C0F;&#x65F6;&#x7684;&#x52AA;&#x529B;&#x540E;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x5F00;&#x53D1;&#x51FA;&#x7684;&#x811A;&#x672C;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x7ECF;&#x8FC7;&#x4E86;&#x6570;&#x5C0F;&#x65F6;&#x7684;&#x52AA;&#x529B;&#x540E;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x5F00;&#x53D1;&#x51FA;&#x7684;&#x811A;&#x672C;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/50f8714c-ebcb-43e4-a466-b7ec9b6038e6.gif" class="lazy" alt="" data-original="http://ww3.sinaimg.cn/large/c2b1756bjw1e29jftqeldg.gif" width="550"></p>
+<h3 id="&#x5F53;&#x5728;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x8C37;&#x6B4C;&#x641C;&#x7D22;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C31;&#x627E;&#x5230;&#x4E86;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;">&#x5F53;&#x5728;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x8C37;&#x6B4C;&#x641C;&#x7D22;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C31;&#x627E;&#x5230;&#x4E86;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x65F6;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6837;&#x5B50;</h3>
+<hr style="margin-bottom: 50px;">
+<p><img style="display: inline;" src="http://www.myexception.cn/img/2014/09/01/86fe185b-4a82-429d-b76c-6b860f76a789.gif" class="lazy" alt="" data-original="http://ww1.sinaimg.cn/large/c2b1756bjw1e2hhzfiavbg.gif" width="550"></p>
+<h3 id="&#x505A;&#x5E02;&#x573A;&#x7684;&#x90A3;&#x5E2E;&#x5BB6;&#x4F19;&#x544A;&#x8BC9;&#x7A0B;&#x5E8F;&#x5458;&#x4ED6;&#x4EEC;&#x662F;&#x8FD9;&#x6837;&#x9500;&#x552E;&#x8F6F;&#x4EF6;&#x7684;">&#x505A;&#x5E02;&#x573A;&#x7684;&#x90A3;&#x5E2E;&#x5BB6;&#x4F19;&#x544A;&#x8BC9;&#x7A0B;&#x5E8F;&#x5458;&#x4ED6;&#x4EEC;&#x662F;&#x8FD9;&#x6837;&#x9500;&#x552E;&#x8F6F;&#x4EF6;&#x7684;</h3>
+<p>&#xA0;</p></div></div>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../happy/index.html" class="navigation navigation-prev " aria-label="Previous page: 段子集中营"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../happy/section2.html" class="navigation navigation-next " aria-label="Next page: 要嫁就嫁程序猿"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbookuse"},"toc":{"addClass":true,"className":"toc"},"github":{"url":"https://github.com/piaosanlang"},"search-pro":{"cutWordLib":"nodejieba","defineWord":["gitbook-use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright &copy enlong 2016","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"donate":{"wechat":"/photos/weixin.JPG","alipay":"/photos/alipay.PNG","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"splitter":{},"ace":{},"expandable-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
